@@ -2,10 +2,26 @@
   <header class="row vh-20 bg-dark p-4">
     <h1 class="col-12 text-center text-success">Publish App</h1>
   </header>
-  <section class="row p-2 py-3 bg-warning">
+  <section class="row p-2 py-0 bg-dark">
     <h5 class="col-3 text-start text-primary">{{time|date:'E, dd-MMM-YYYY'}}</h5>
-    <h3 class="col-6 text-center text-dark">Angular</h3>
+    <h3 class="col-6 text-center text-light">Angular</h3>
     <h5 class="col-3 text-end text-primary">{{time|date:'hh:mm:ss'}}</h5>
   </section>
-
+  <div class="row bg-warning">
+    <nav class="navbar navbar-expand-sm navbar-custom">
+      <div class="container-fluid" style="padding: 0px;margin: 0px;">
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home" routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <router-outlet></router-outlet>
 </div>
